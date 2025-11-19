@@ -82,7 +82,7 @@ body {
 
 /* Page content */
 .content {
-  padding: 16px;
+  padding: 8px;
 }
 /* ==========================================================================
    3. Typography and Heading Styles
@@ -197,19 +197,119 @@ p {
    (container, row, col-*) with its utility classes, most of the original 
    RWD CSS is now redundant and removed. We only adjust font scaling.
 */
+/* =========================================================
+   1. Extra Small Devices (Mobile - Default)
+   Styles here apply to ALL screens unless overridden later.
+   ========================================================= */
 
-/* Tablet/Medium screens (768px and up) */
+/* You already set the default font size in the root HTML section (100% or 1rem) */
+html {
+    font-size: 100%; 
+}
+
+/* Example: Setting default padding for an element (e.g., full-width stacking) */
+.section-content {
+    padding: 1rem 0.5rem;
+}
+
+/* Example: If you need to make an element stack vertically */
+.my-flex-group {
+    flex-direction: column;
+}
+
+/* =========================================================
+   2. Small Devices (min-width: 576px)
+   --------------------------------------------------------- */
+@media (min-width: 576px) {
+    /* html: Font scale adjustment (Optional: usually skipped unless text looks small) 
+       html {
+           font-size: 103%;
+       }
+    */
+
+    /* Layout Use Case: Adjusting spacing for slightly larger screens 
+       .section-content {
+           padding: 1.5rem 1rem;
+       }
+    */
+
+    /* Layout Use Case: If an element was explicitly stacked, you might allow a side-by-side view here.
+       .my-flex-group {
+           flex-direction: row;
+       }
+    */
+}
+/* =========================================================
+   3. Medium Devices (min-width: 768px) - Your current setup
+   --------------------------------------------------------- */
 @media (min-width: 768px) {
     html {
         /* Slightly increase base font size for better readability on tablets */
         font-size: 106.25%; 
     }
+
+    /* Layout Use Case: Override an element's width not managed by Bootstrap's grid.
+       .top-right-section {
+           max-width: 350px; 
+       }
+    */
+    
+    /* Layout Use Case: Adding horizontal padding to better frame content on tablets.
+       .container {
+           padding: 0 15px; 
+       }
+    */
 }
 
-/* Desktop/Large screens (1024px and up) */
-@media (min-width: 1024px) {
+
+/* =========================================================
+   4. Large Devices (min-width: 992px)
+   --------------------------------------------------------- */
+@media (min-width: 992px) {
+    /* Note: Using 1024px, as in your original, is common. 
+       We'll stick to 992px here for Bootstrap consistency. */
+    
+    /* html: Your originally proposed font scaling for large screens.
+       This will override the 'md' setting above.
+    */
     html {
-        /* Further increase base font size for desktop viewing comfort */
         font-size: 112.5%; 
     }
+
+    /* Layout Use Case: Increasing the spacing/gutter on large screens.
+       .row {
+           gap: 20px; 
+       }
+    */
+
+    /* Layout Use Case: Fixing a large navigation bar to the top.
+       .navbar {
+           position: fixed;
+           width: 100%;
+       }
+    */
 }
+
+/* =========================================================
+   5. Extra Large Devices (min-width: 1200px)
+   --------------------------------------------------------- */
+@media (min-width: 1200px) {
+    html {
+        /* Final font size bump for very large displays */
+        font-size: 120%; 
+    }
+
+    Layout Use Case: Allowing the main content container to stretch wider.
+       .container {
+           max-width: 1400px;
+       }
+    */
+
+    Layout Use Case: Adjusting padding to prevent content from hitting the edges 
+       of extremely wide screens.
+       .section-dark {
+           padding: 6rem 0;
+       }
+    */
+}
+
