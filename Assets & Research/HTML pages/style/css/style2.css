@@ -52,7 +52,7 @@ body {
     */
     background-size: cover;
 	
-	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("images/background2.avif");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../style/images/background2.avif");
 	
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
@@ -115,7 +115,7 @@ p {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect */
   /* FIX 2: Changed \ to / in the URL path */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.15)), url("images/bubbles2.avif");
+  background-image: url("images/bubbles2.avif");
 
   /* FIX 1: Changed % to vh (viewport height) */
   height: 15vh;
