@@ -17,7 +17,7 @@ body {
 	/* align-content: center; */
 }
 
-.element {
+.centered {
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;

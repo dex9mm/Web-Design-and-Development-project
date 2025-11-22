@@ -3,8 +3,7 @@
    ========================================================================== */
 
 /* @import: This section imports the specified Google Fonts.
-   Note: BBH Sans Bartle is replaced with 'Oswald' as a strong, geometric
-   sans-serif font for headings, closely matching the design board's visual style.
+
 */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Slab:wght@400;700&display=swap');
 
@@ -52,7 +51,7 @@ body {
     */
     background-size: cover;
 	
-	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../style/images/background2.avif");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif");
 	
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
@@ -76,7 +75,7 @@ body {
   display: block;
   color: #3572EF;
   text-align: center;
-  padding: 8px;
+  padding: 4px;
   text-decoration: shadow;
 }
 
@@ -115,7 +114,7 @@ p {
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect */
   /* FIX 2: Changed \ to / in the URL path */
-  background-image: url("images/bubbles2.avif");
+  background-image: url("../images/bubbles2.avif");
 
   /* FIX 1: Changed % to vh (viewport height) */
   height: 15vh;
@@ -138,7 +137,51 @@ p {
 .bg-dark p, .bg-primary p {
     color: var(--color-light-text);
 }
-
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: relative; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	/* background-image: url("../images/background2.avif"); */
+	background-color: #3ABEF9; /* Fallback color */ 
+	/* background-color: #3ABEF9; /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #3ABEF9;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.0),0 6px 20px 0 rgba(0,0,0,0.0);
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+/* Add Animation */
+@keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+		
 /* ==========================================================================
    4. Bootstrap Component Overrides (Buttons)
    ========================================================================== */
