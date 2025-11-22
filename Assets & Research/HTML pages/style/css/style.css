@@ -16,14 +16,13 @@
 
 /* navbar start */
 .navbar{
-  background-color: #3ABEF9;
+  background-color: #111;
   /* data-bs-theme="dark" */
   text-align: center;
   margin-bottom: 0.8em;
 }
 
 .navBtn {
-	background-color: #3ABEF9;
   /* background-color: #333; */
   color: #fff;
   margin: 0;

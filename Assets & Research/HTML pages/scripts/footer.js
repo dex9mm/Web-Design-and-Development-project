@@ -1,3 +1,5 @@
+// all worked on navbar development
+// Tristan, Alex, Derek, Andrei
 var footer = `
 		<!-- FOOTER -->
 		<footer class="mt-5 py-4 bg-dark text-light">

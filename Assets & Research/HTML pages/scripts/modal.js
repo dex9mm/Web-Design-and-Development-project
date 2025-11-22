@@ -40,7 +40,7 @@
 	
 	
         // The URL for the Google Programmable Search Engine query
-        const SEARCH_URL = "https://programmablesearchengine.google.com/docs/element/results-only_url.html?q=nearest%20water%20amenity";
+        const SEARCH_URL = "https://www.google.com/search?q=nearest+water+amenity&ie=UTF-8";
 
         /**
          * Navigates the user to the predefined search URL in a new tab.
@@ -51,14 +51,10 @@
             window.open(SEARCH_URL, '_blank');
         }
 
-        // Optional: Add event listener as a modern alternative to onclick in HTML
-        // This is commented out as the user provided the onclick structure, but is
-        // included for best practice awareness.
-        /*
         document.addEventListener('DOMContentLoaded', () => {
             const button = document.getElementById('amenityButton');
             if (button) {
                 button.addEventListener('click', findNearestAmenity);
             }
         });
-        */
+    
