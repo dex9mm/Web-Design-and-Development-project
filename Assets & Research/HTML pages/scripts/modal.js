@@ -37,24 +37,43 @@
             });
         };
     }); 
-	
-	
-        // The URL for the Google Programmable Search Engine query
-        const SEARCH_URL = "https://www.google.com/search?q=nearest+water+amenity&ie=UTF-8";
+//\\
 
-        /**
-         * Navigates the user to the predefined search URL in a new tab.
-         */
-        function findNearestAmenity() {
-            // Using window.open('_blank') is preferred for search links 
-            // so the user's current page is not lost.
-            window.open(SEARCH_URL, '_blank');
-        }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('amenityButton');
-            if (button) {
-                button.addEventListener('click', findNearestAmenity);
-            }
-        });
-    
+		//const SEARCH_URL = "https://www.google.com/search?q=nearest+water+amenity&ie=UTF-8";
+
+		//	function findNearestAmenity() {
+			//	const modal = document.getElementById("amenityModal");
+		//		const frame = document.getElementById("modalFrame");
+////
+		////		frame.src = SEARCH_URL;  
+		////		modal.style.display = "block";
+		////	}
+
+		////	document.addEventListener('DOMContentLoaded', () => {
+		////		const button = document.getElementById('amenityButton');
+		////		if (button) {
+		////			button.addEventListener('click', findNearestAmenity);
+		////		}
+
+		////		document.querySelector(".close").onclick = () => {
+		////			document.getElementById("amenityModal").style.display = "none";
+		////		};
+		////	});
+				const SEARCH_URL = "https://www.google.com/search?q=nearest+water+amenity&ie=UTF-8";
+
+				function findNearestAmenity() {
+					const modal = document.getElementById("amenityModal");
+					const resultsLink = document.getElementById("resultsLink");
+
+					resultsLink.href = SEARCH_URL;
+					modal.style.display = "block";
+				}
+
+				document.addEventListener('DOMContentLoaded', () => {
+					document.getElementById('amenityButton').addEventListener('click', findNearestAmenity);
+
+					document.querySelector(".close").onclick = () => {
+						document.getElementById("amenityModal").style.display = "none";
+					};
+				});

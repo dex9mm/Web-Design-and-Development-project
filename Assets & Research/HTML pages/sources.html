@@ -30,9 +30,16 @@
 		<section class="row g-4 mb-5">
 					<div class="hero-image">
 						<div class="hero-text">
-							<h1>The Many Services Of UISCE Eire!</h1>
+							<h1>The Many Sources Of UISCE!</h1>
 							<p>sustainablity</p>
-							<button type="button" id="amenityButton" onclick="findNearestAmenity()" class="btn btn-primary w-100 mt-3">Find Your Nearest Amenity</button>
+							<button type="button" id="amenityButton" onclick="findNearestAmenity()" class="btn btn-primary w-50 mt-3">Find Your Nearest Amenity</button>
+							<div id="amenityModal" class="modal">
+							  <div class="modal-content w-50 mt-3">
+								<span class="close">&times;</span>
+								<p>Your nearby water amenities:</p>
+								<a id="resultsLink" href="#" target="_blank">Open Results</a>
+							  </div>
+							</div>
 						</div>
 					</div>
 		</section>			
@@ -42,7 +49,7 @@
         <section class="row g-4 mb-5">
             
             <div class="col-lg-7 col-12">
-                <div class="wire-box image-placeholder">
+                <div class="wire-box">
 				<img src="style/images/IrishWater4.png" class="img-fluid" alt="Irish water InfoGraphic">Our Water services!
                     </img>
                     
