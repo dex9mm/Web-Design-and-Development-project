@@ -15,7 +15,8 @@
 		<title>Sustainability</title>
 		<link rel="stylesheet" href="style/css/style.css">
 	</head>
-	<body>
+	
+	<body class="ag_body">
 		<!-- navbar -->
 	    <script src="scripts/nav.js"></script>
 
@@ -30,7 +31,7 @@
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-12 ag_col">
 					<p>r1 c1</p>
-					<h1 class="font-roboto">header main</h1>
+					<h1 class="font-roboto ag_h1">header main</h1>
 				</div>
 			</div>
 
@@ -63,7 +64,7 @@
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-12 ag_col">
 					<p>r4 c1</p>
-					<h1>header secondary</h1>
+					<h1 class="font-roboto ag_h1">header secondary</h1>
 					<p>paragraph starting here</p>
 					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 				</div>
@@ -87,13 +88,34 @@
 
 			<!-- row -->
 			<div class="row ag_row justify-content-sm-center">
-				<div class="col-sm-6 ag_col">
-					<p>r5 c1</p>
-					<p>form here coming soon</p>
-					<p>form here coming soon</p>
-					<p>form here coming soon</p>
-					<p>form here coming soon</p>
-					<p>form here coming soon</p>
+				<div class="col-sm-6 ag_col text-start">
+					<p class="text-center">r5 c1</p>
+					<!-- <p>form here coming soon</p> -->
+
+					<form>
+						<div class="form-group">
+							<label for="ag_fname">First Name:</label>
+							<br>
+							<input type="text" id="ag_fname" name="ag_fname" value="John">
+							<br>
+							<label for="ag_lname">Last Name:</label>
+							<br>
+							<input type="text" id="ag_lname" name="ag_lname" value="Doe">
+							<br>
+							<label for="ag_email">Email:</label>
+							<br>
+							<input type="email" id="ag_email" name="ag_email" value="john@doe.ie">
+							<br>
+							<label for="ag_date">Email:</label>
+							<br>
+							<input type="date" id="ag_date" name="ag_date">
+							<br>
+							<br>
+
+							<input type="submit" value="Submit">
+							<input type="reset" value="Reset">
+						</div>
+					</form>
 				</div>
 
 				<div class="col-sm-6 ag_col">

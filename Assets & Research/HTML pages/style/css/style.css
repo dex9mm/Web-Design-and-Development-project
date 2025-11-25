@@ -1,4 +1,5 @@
 /* style.css */
+/* group g css cobined Derek, Andrei, Alexander, Tristan */
 
 .font-bartle {
   font-family: "BBH Sans Bartle", sans-serif;
@@ -14,17 +15,26 @@
 }
 /* fonts end */
 
+/* .row {
+  border: 4px solid #333;
+} */
+
+/*common tags ALL*/
+
 /* navbar start */
 .navbar{
-  background-color: #111;
+  background-color:#3ABEF9;
   /* data-bs-theme="dark" */
   text-align: center;
   margin-bottom: 0.8em;
 }
+.navbar-brand {
+	color: #A6F5C2;
+}
 
 .navBtn {
   /* background-color: #333; */
-  color: #fff;
+  color:  #040968;
   margin: 0;
   padding: 0;
   /* padding: 14px 16px; */
@@ -34,7 +44,8 @@
 }
 
 .navBtn:hover {
-  background-color: #111;
+    background-color: #A6F5C2;
+    color: black;
 }
 
 ul {
@@ -63,15 +74,20 @@ ul li a:hover {
 }
 
 /* navbar end */
-/*common tags ALL*/
+
+
 body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif"); 
 	background-size: cover;
  /* background-color: lightgreen; */
 }
+/*common tags ALL end*/
 
-/*common tags ALL*/
+
 /* Andrei G section start */
+.ag_body {
+  color: black;
+}
 
 .ag_col:hover {
   /* background-color: #111; */
@@ -81,13 +97,18 @@ body {
   border: 4px solid #333;
   /* background-color: #333; */
 }
-.ag_row {
-  border: 4px solid #ff0000;
-  margin-bottom: 1em;
-  /* background-color: #333; */
-}
-/* Andrei G section end */
 
+.ag_row {
+  /* border: 4px solid #ff0000; */
+  margin-bottom: 1em;
+  background-color: #d1eaff;
+}
+
+.ag_h1, .ag_h2, .ag_h3, .ag_h4, .ag_h5, .ag_h6 {
+  color: black;
+}
+
+/* Andrei G section end */
 
 
 /* Alexander Kirichenko section start */
@@ -224,7 +245,37 @@ body {
 /* Derek o K section end */
 
 /* Tristan section start */
+#map{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/* width: auto; */
+	/* border: 3px solid black; */
+	/* padding: 0px; */
+	/* align-content: center; */
+}
 
+.centered {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.bbh-sans{
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#imgtri{
+	width:20%;
+}
+
+.roboto-slab{
+  font-family: "Roboto Slab", serif;
+  font-weight: <weight>;
+  font-style: normal;
+}
 /* Tristan section end */
 
 

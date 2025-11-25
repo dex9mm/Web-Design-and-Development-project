@@ -1,0 +1,358 @@
+/* ==========================================================================
+   1. Google Fonts & Variables (Design Board Compliance)
+   ========================================================================== */
+
+/* @import: This section imports the specified Google Fonts.
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* CSS Variables: Storing the Colour Palette from the Design Board for consistency */
+:root {
+    /* Primary Dark Blue (Deepest) - Used for backgrounds, strong headings */
+    --color-primary-dark: #050C9C; 
+    /* Secondary Blue (Medium) - Used for buttons, main links, feature backgrounds */
+    --color-secondary: #3572EF; 
+    /* Accent Blue (Bright/Light) - Used for hover effects, highlights, backgrounds */
+    --color-accent-light: #3ABEF9; 
+    /* Pale Blue (Subtle) - Used for subtle backgrounds, borders */
+    --color-pale-bg: #A7E6EF; 
+    /* Text Color */
+    --color-dark-text: #212529; /* Standard dark color for high contrast */
+    --color-light-text: #F8F9FA; /* Off-white for light-on-dark contrast */
+}
+
+/* ==========================================================================
+   2. Basic Setup & Body Defaults
+   ========================================================================== */
+
+/* A better box model (Kept from original for robust base styling) */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* Sets a base font size for scaling using 'rem' units. 
+       Equivalent to 16px.
+    */
+    font-size: 100%; 
+}
+
+body {
+	/* 1. Prevents the image from repeating (tiling) across the background. */
+    <!-- background-repeat: no-repeat; -->
+
+    /* 2. Centers the image both horizontally and vertically. */
+    background-position: center center; 
+
+    /* 3. Ensures the image covers the entire element, maintaining aspect ratio. 
+       Use this if you want the image to always fill the screen. 
+       Note: Part of the image may be clipped to cover the space.
+    */
+    background-size: cover;
+	
+	background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../images/background2.avif");
+	
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    /* Sets the default background to the lightest colour from the palette */
+   
+    /* Sets the default text color to a standard dark shade */
+    color: var(--color-dark-text);
+}
+/* Style the navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color:#3ABEF9;
+}
+
+/* Navbar links */
+#navbar a {
+  float: right;
+  display: block;
+  color: #3572EF;
+  text-align: center;
+  padding: 4px;
+  text-decoration: shadow;
+}
+
+/* Page content */
+.content {
+  padding: 8px;
+}
+/* ==========================================================================
+   3. Typography and Heading Styles
+   ========================================================================== */
+
+/* Headings: Uses the strong 'Oswald' font (substitute for BBH Sans Bartle)
+   for an impactful, modern look as seen in the design board.
+*/
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    /* Dark blue for strong contrast on lighter backgrounds */
+    color: var(--color-primary-light); 
+    line-height: 1.8;
+}
+
+
+/* Paragraph Styles: Uses the specified 'Roboto Slab' for readability 
+   in long-form text.
+*/
+p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: var(--color-dark-text); 
+    /* Resetting the excessive padding from the original CSS to let Bootstrap handle layout */
+    padding: 0; 
+    margin-bottom: 1rem;
+}
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect */
+  /* FIX 2: Changed \ to / in the URL path */
+  background-image: url("../images/bubbles2.avif");
+
+  /* FIX 1: Changed % to vh (viewport height) */
+  height: 15vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: relative;
+  position: relative;
+}
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+/* When paragraph text is placed on a dark background (e.g., in a hero section) */
+.bg-dark p, .bg-primary p {
+    color: var(--color-light-text);
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: relative; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	/* background-image: url("../images/background2.avif"); */
+	background-color: #3ABEF9; /* Fallback color */ 
+	/* background-color: #3ABEF9; /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #3ABEF9;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.0),0 6px 20px 0 rgba(0,0,0,0.0);
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+/* Add Animation */
+@keyframes animatetop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+		
+/* ==========================================================================
+   4. Bootstrap Component Overrides (Buttons)
+   ========================================================================== */
+
+/* Overriding Bootstrap's primary button to use the design board's 
+   secondary blue color (#3572EF) and dark blue for hover.
+*/
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-light-text); /* White text for contrast */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    /* Adding subtle box shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    /* On hover, transition to the darkest blue for a prominent effect */
+    background-color: var(--color-primary-dark); 
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    color: var(--color-light-text);
+}
+
+/* ==========================================================================
+   5. Background & Section Styling (Applying the Palette)
+   ========================================================================== */
+
+/* Custom Class: Applies the deepest blue from the palette 
+   for hero sections or impactful full-width areas.
+*/
+.section-dark {
+    background-color: var(--color-primary-dark);
+    color: var(--color-light-text);
+    padding: 4rem 0; /* Vertical padding for breathing room */
+}
+.section-dark h2, .section-dark h3 {
+    color: var(--color-accent-light); /* Light blue headings on dark background */
+}
+
+/* Image Overlays/Captions: Using the medium blue for overlays, 
+   tying into the design board's water patterns theme.
+*/
+.image-overlay-caption {
+    background-color: rgba(53, 114, 239, 0.8); /* Secondary Blue with transparency */
+    color: var(--color-light-text);
+    padding: 1rem;
+}
+
+/* ==========================================================================
+   6. RWD Adjustments (Keeping only necessary overrides)
+   ========================================================================== */
+
+/* Media Query Simplification: Since Bootstrap handles the core grid 
+   (container, row, col-*) with its utility classes, most of the original 
+   RWD CSS is now redundant and removed. We only adjust font scaling.
+*/
+/* =========================================================
+   1. Extra Small Devices (Mobile - Default)
+   Styles here apply to ALL screens unless overridden later.
+   ========================================================= */
+
+/* You already set the default font size in the root HTML section (100% or 1rem) */
+html {
+    font-size: 100%; 
+}
+
+/* Example: Setting default padding for an element (e.g., full-width stacking) */
+.section-content {
+    padding: 1rem 0.5rem;
+}
+
+/* Example: If you need to make an element stack vertically */
+.my-flex-group {
+    flex-direction: column;
+}
+
+/* =========================================================
+   2. Small Devices (min-width: 576px)
+   --------------------------------------------------------- */
+@media (min-width: 576px) {
+    /* html: Font scale adjustment (Optional: usually skipped unless text looks small) 
+       html {
+           font-size: 103%;
+       }
+    */
+
+    /* Layout Use Case: Adjusting spacing for slightly larger screens 
+       .section-content {
+           padding: 1.5rem 1rem;
+       }
+    */
+
+    /* Layout Use Case: If an element was explicitly stacked, you might allow a side-by-side view here.
+       .my-flex-group {
+           flex-direction: row;
+       }
+    */
+}
+/* =========================================================
+   3. Medium Devices (min-width: 768px) - Your current setup
+   --------------------------------------------------------- */
+@media (min-width: 768px) {
+    html {
+        /* Slightly increase base font size for better readability on tablets */
+        font-size: 106.25%; 
+    }
+
+    /* Layout Use Case: Override an element's width not managed by Bootstrap's grid.
+       .top-right-section {
+           max-width: 350px; 
+       }
+    */
+    
+    /* Layout Use Case: Adding horizontal padding to better frame content on tablets.
+       .container {
+           padding: 0 15px; 
+       }
+    */
+}
+
+
+/* =========================================================
+   4. Large Devices (min-width: 992px)
+   --------------------------------------------------------- */
+@media (min-width: 992px) {
+    /* Note: Using 1024px, as in your original, is common. 
+       We'll stick to 992px here for Bootstrap consistency. */
+    
+    /* html: Your originally proposed font scaling for large screens.
+       This will override the 'md' setting above.
+    */
+    html {
+        font-size: 112.5%; 
+    }
+
+    /* Layout Use Case: Increasing the spacing/gutter on large screens.
+       .row {
+           gap: 20px; 
+       }
+    */
+
+    /* Layout Use Case: Fixing a large navigation bar to the top.
+       .navbar {
+           position: fixed;
+           width: 100%;
+       }
+    */
+}
+
+/* =========================================================
+   5. Extra Large Devices (min-width: 1200px)
+   --------------------------------------------------------- */
+@media (min-width: 1200px) {
+    html {
+        /* Final font size bump for very large displays */
+        font-size: 120%; 
+    }
+
+    Layout Use Case: Allowing the main content container to stretch wider.
+       .container {
+           max-width: 1400px;
+       }
+    */
+
+    Layout Use Case: Adjusting padding to prevent content from hitting the edges 
+       of extremely wide screens.
+       .section-dark {
+           padding: 6rem 0;
+       }
+    */
+}
+
