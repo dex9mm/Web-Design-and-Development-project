@@ -255,6 +255,17 @@ body {
 	/* align-content: center; */
 }
 
+.well-image{
+	border-radius: 10px; 
+	padding: 10px; 
+	height: 70%;
+}
+	
+
+body.consv{
+	background-image: url("../images/vividblue.jpg");
+}
+
 .centered {
   max-width: fit-content;
   margin-left: auto;
