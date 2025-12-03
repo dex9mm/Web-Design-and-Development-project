@@ -2,34 +2,58 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="news page with a registration form">
+		<meta name="author" content="Andrei Grigorita">
+		<meta name="keywords" content="sustainability, registration">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+
+		<!-- bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 		<!-- google fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">	
-
-		<!-- bootstrap -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 		<title>Sustainability</title>
 		<link rel="stylesheet" href="style/css/style.css">
 	</head>
 	
 	<body class="ag_body">
-		<!-- navbar -->
-		<script src="scripts/nav.js"></script>
+		<!-- navbar with insertAdjacentHTML method -->
+		<!-- <script src="scripts/nav.js"></script> -->
 
-		<!-- javascript -->
-		<script>
-			<!-- let ans = confirm("do you want to subscripbe to our newsletter"); -->
-			<!---->
-			<!-- let nm = prompt("enter your name", "John"); -->
-			<!-- let mail = prompt("enter your email", "john@doe.com"); -->
-			<!-- let course = prompt("enter your course", "COMPSCI"); -->
+		<!-- bootstrap navbar -->
+		<nav class="navbar navbar-expand-lg ag_navbar" role="navigation">
+			<div class="container-fluid">
+				<!-- branding -->
+				<a class="navbar-brand"  href="index.html">Group G |</a>
+				<!-- login menu -->
+				<!-- <button class="ag_login_icon" type="button"> -->
+				<!-- 	<span class="">Log in</span> -->
+				<!-- </button> -->
+				<!-- hamburger menu -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			// alert("your name: " + nm + "\nyour email: " + mail + "\nyour course: " + course);
-		</script>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<!-- buttons in compact form -->
+					<a class="nav-link navBtn" href="index.html">Home</a>
+					<a class="nav-link navBtn" href="news.html">News</a>
+					<a class="nav-link navBtn" href="uisceire.html">UisceIRE</a>
+					<a class="nav-link navBtn" href="sources.html">Sources</a>
+					<a class="nav-link navBtn" href="conservation.html">Conservation</a>
+					<a class="nav-link navBtn" href="findus.html">Find Us</a>
+					<a class="nav-link navBtn" href="contact.html">Contact Us</a>
+					<a class="nav-link navBtn" href="info.html">Info</a>
+					<button class="nav-link navBtn ag_loginBtn" onclick="pop_up();" id="ag_loginBtn">Log in</button>
+				</div>
+			</div>
+		</nav>
 
 		<!-- body of the page -->
 		<div class="container text-center">
@@ -37,7 +61,7 @@
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-12 ag_col">
 					<p>r1 c1</p>
-					<h1 class="font-bartle ag_h1">header main</h1>
+					<h1 class="font-bartle ag_h1">Clean Water and Sanitation</h1>
 				</div>
 			</div>
 
@@ -54,12 +78,14 @@
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-4 ag_col">
 					<p>r3 c1</p>
-					<p>image here coming later</p>
+					<img src="style/images/ag_index_goal.png" alt="illustration of a tap with a water dripping and text">
+					<br>
 				</div>
 
 				<div class="col-sm-8 ag_col">
 					<p>r3 c2</p>
-					<p>text around the image here</p>
+					<!-- <p>text around the image here</p> -->
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 				</div>
 			</div>
 
@@ -76,18 +102,23 @@
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-8 ag_col">
 					<p>r5 c1</p>
-					<p>text around the image here</p>
+					<!-- <p>text around the image here</p> -->
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 				</div>
 
 				<div class="col-sm-4 ag_col">
 					<p>r5 c2</p>
-					<p>image here coming later</p>
+					<img src="style/images/ag_index_tap.png" alt="illustration of a tap with a water dripping and text">
+					<br>
 				</div>
 			</div>
 		</div>
 
 		<!-- bootstrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+		<!-- import external validation javascript aka login logout pop up-->
+		<script type="text/javascript" src="scripts/ag_validation.js"></script>
 
 		<!-- footer will be inserted here from javascript -->
 		<script src="scripts/footer.js"></script>

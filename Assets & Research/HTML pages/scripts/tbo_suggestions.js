@@ -1,5 +1,6 @@
 // Tristan's form validation
 
+
 function validForm() {
 	const names = document.getElementById("names").value;
 	const surname = document.getElementById("surname").value;
@@ -25,6 +26,16 @@ function validForm() {
 	
 	if(surname === "" || surname.length < 2){
 		surn_Err.textContent = "Please eneter your surname correctly";
+		is_form_valid = false;
+	}
+	
+	if(email === "" || email.length < 2){
+		email_Err.textContent = "Please eneter a valid Email";
+		is_form_valid = false;
+	}
+	
+	if(suggest === "" || suggest.length < 2){
+		sug_Err.textContent = "Please eneter a suggestion";
 		is_form_valid = false;
 	}
 	

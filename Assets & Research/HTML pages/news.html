@@ -2,28 +2,64 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="news page with a registration form">
+		<meta name="author" content="Andrei Grigorita">
+		<meta name="keywords" content="sustainability, registration">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+
+		<!-- bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 		<!-- google fonts -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Monda:wght@400..700&display=swap" rel="stylesheet"> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Monda:wght@400..700&display=swap" rel="stylesheet">
-		
-		<!-- bootstrap -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+		<!-- import external validation javascript -->
+		<!-- <script type="text/javascript" src="scripts/ag_validation.js"></script> -->
 
 		<title>Sustainability</title>
 		<link rel="stylesheet" href="style/css/style.css">
 	</head>
-	
+
 	<body class="ag_body">
-		<!-- navbar -->
-	    <script src="scripts/nav.js"></script>
+		<!-- navbar with insertAdjacentHTML method -->
+		<!-- <script src="scripts/nav.js"></script> -->
 
-		<!-- javascript -->
-		<script>
+		<!-- bootstrap navbar -->
+		<nav class="navbar navbar-expand-lg ag_navbar" role="navigation">
+			<div class="container-fluid">
+				<!-- branding -->
+				<a class="navbar-brand"  href="index.html">Group G |</a>
+				<!-- login menu -->
+				<!-- <button class="ag_login_icon" type="button"> -->
+				<!-- 	<span class="">Log in</span> -->
+				<!-- </button> -->
+				<!-- hamburger menu -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		</script>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<!-- buttons in compact form -->
+					<a class="nav-link navBtn" href="index.html">Home</a>
+					<a class="nav-link navBtn" href="news.html">News</a>
+					<a class="nav-link navBtn" href="uisceire.html">UisceIRE</a>
+					<a class="nav-link navBtn" href="sources.html">Sources</a>
+					<a class="nav-link navBtn" href="conservation.html">Conservation</a>
+					<a class="nav-link navBtn" href="findus.html">Find Us</a>
+					<a class="nav-link navBtn" href="contact.html">Contact Us</a>
+					<a class="nav-link navBtn" href="info.html">Info</a>
+					<button class="nav-link navBtn ag_loginBtn" onclick="pop_up();" id="ag_loginBtn">Log in</button>
+				</div>
+			</div>
+		</nav>
 
 		<!-- body of the page -->
 		<div class="container text-center">
@@ -73,53 +109,111 @@
 			<!-- row -->
 			<div class="row ag_row justify-content-sm-center">
 				<div class="col-sm-6 ag_col">
-					<p>r4 c1</p>
-					<p>images here coming soon</p>
-					<p>images here coming soon</p>
-					<p>images here coming soon</p>
-					<p>images here coming soon</p>
+					<!-- <p>r5 c1</p> -->
+					<!-- <p>images here coming soon</p> -->
+					<!-- <p>images here coming soon</p> -->
+					<!-- <p>images here coming soon</p> -->
+					<!-- <p>images here coming soon</p> -->
+					<img src="style/images/ag_news_swan_couleur.jpg" alt="a swan in the water author:couleur pixabay.com">
 				</div>
 
 				<div class="col-sm-6 ag_col">
-					<p>r4 c2</p>
+					<p>r5 c2</p>
 					<p>text around the images here</p>
 				</div>
 			</div>
 
 			<!-- row -->
 			<div class="row ag_row justify-content-sm-center">
-				<div class="col-sm-6 ag_col text-start">
-					<p class="text-center">r5 c1</p>
+				<div class="col-sm-6 ag_col text-start font-jb">
+					<br>
+					<h4 class="text-center">Make an account to stay updated</h4>
+					<p class="text-center">r6 c1</p>
 					<!-- <p>form here coming soon</p> -->
 
-					<form>
+					<form name="registartion_form" onsubmit="return validate_form();" onreset="reset_error();">
 						<div class="form-group">
+							<label for="ag_username">Username:</label>
+							<br>
+							<input type="text" id="ag_username" name="ag_username" placeholder="Enter a username">
+							<br id="error_message01">
+							<span id="username_error" class="error_message"></span>
+							<br>
+
 							<label for="ag_fname">First Name:</label>
 							<br>
-							<input type="text" id="ag_fname" name="ag_fname" value="John">
+							<input type="text" id="ag_fname" name="ag_fname" placeholder="Enter your first name">
+							<br id="error_message02">
+							<span id="fname_error" class="error_message"></span>
 							<br>
+
 							<label for="ag_lname">Last Name:</label>
 							<br>
-							<input type="text" id="ag_lname" name="ag_lname" value="Doe">
+							<input type="text" id="ag_lname" name="ag_lname" placeholder="Enter your last name">
+							<br id="error_message03">
+							<span id="lname_error" class="error_message"></span>
 							<br>
+
+							<label for="ag_occupation">Select occupation:</label>
+							<br>
+							<select id="ag_occupation" name="Occupation">
+								<option value="">select occupation</option>
+								<option value="employed">employed</option>
+								<option value="unemployed">unemployed</option>
+								<option value="student">student</option>
+								<option value="don't specify">don't specify</option>
+							</select>
+							<br id="error_message04">
+							<span id="occupation_error" class="error_message"></span>
+							<br>
+
 							<label for="ag_email">Email:</label>
 							<br>
-							<input type="email" id="ag_email" name="ag_email" value="john@doe.ie">
+							<input type="email" id="ag_email" name="ag_email" placeholder="Enter your email">
+							<br id="error_message05">
+							<span id="email_error" class="error_message"></span>
 							<br>
-							<label for="ag_date">Email:</label>
+
+							<label for="ag_date">Date of Birth:</label>
 							<br>
 							<input type="date" id="ag_date" name="ag_date">
+							<br id="error_message06">
+							<span id="date_error" class="error_message"></span>
+							<br>
+
+							<label for="ag_passwd">Password:</label>
+							<br>
+							<input type="password" id="ag_passwd" name="ag_passwd" placeholder="enter a strong password">
+							<br id="error_message07">
+							<span id="passwd_error" class="error_message"></span>
+							<br>
+
+							<p>
+							<label for="ag_rpasswd">Repeat Password:</label>
+							<br>
+							<input type="password" id="ag_rpasswd" name="ag_rpasswd" placeholder="enter the password again" />
+							<br id="error_message08">
+							<span id="rpasswd_error" class="error_message"></span>
+							<!-- <br> -->
+							</p>
+
+							<input type="checkbox" id="ag_agree" name="ag_agree">
+							<label for="ag_agree">I agree to the terms and conditions.</label>
+							<br id="error_message09">
+							<span id="agree_error" class="error_message"></span>
 							<br>
 							<br>
 
-							<input type="submit" value="Submit">
-							<input type="reset" value="Reset">
+							<input class="font-jb" type="submit" value="Register">
+							<input class="font-jb" type="reset" value="Reset">
+							<br>
+							<br>
 						</div>
 					</form>
 				</div>
 
 				<div class="col-sm-6 ag_col">
-					<p>r5 c2</p>
+					<p>r6 c2</p>
 					<p>text around the form here</p>
 				</div>
 			</div>
@@ -127,6 +221,9 @@
 
 		<!-- bootstrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+		<!-- import external validation javascript -->
+		<script src="scripts/ag_validation.js"></script>
 
 		<!-- footer will be inserted here from javascript -->
 		<script src="scripts/footer.js"></script>

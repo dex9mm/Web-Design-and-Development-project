@@ -7,9 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
+    <!-- Meta -->
     <meta charset="utf-8">
+    <meta name="description" content="Contact form page for website">
+    <meta name="author" content="Alexander Kirichenko">
+    <meta name="keywords" content="sustainability, contact, form">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Contact Us</title>
@@ -29,52 +34,59 @@
 
     <div class="row">
 
-        <!-- LEFT COLUMN with icons -->
+        <!-- LEFT SIDE CONTACT INFO -->
         <div class="col-md-3 mb-5">
+
             <div class="d-flex align-items-center mb-4">
-                <div class="placeholder-square me-3"></div>
-                <span class="fw-bold">Email</span>
+                <img src="style/images/email.svg" width="60" class="me-3">
+                <span class="fw-bold">Email: x257800@test.com</span>
             </div>
 
             <div class="d-flex align-items-center mb-4">
-                <div class="placeholder-square me-3"></div>
-                <span class="fw-bold">Phone</span>
+                <img src="style/images/phone.svg" width="60" class="me-3">
+                <span class="fw-bold">Phone: +333 49504</span>
             </div>
 
             <div class="d-flex align-items-center mb-4">
-                <div class="placeholder-square me-3"></div>
-                <span class="fw-bold">Address</span>
+                <img src="style/images/adress.svg" width="60" class="me-3">
+                <span class="fw-bold">Address: Mayorka Street 5</span>
             </div>
+
         </div>
 
-        <!-- RIGHT COLUMN – CONTACT FORM -->
+        <!-- RIGHT SIDE CONTACT FORM -->
         <div class="col-md-9">
 
-            <form class="contact-form p-4 rounded shadow-lg">
+            <form class="contact-form p-4">
 
-                <!-- Big message textarea -->
+                <!-- Message -->
                 <div class="mb-4">
                     <label class="form-label fw-bold">Your message</label>
-                    <textarea class="form-control form-control-lg" rows="6"
-                        placeholder="Write your message here..."></textarea>
+                    <textarea id="c_message" class="form-control form-control-lg" rows="6"
+                              placeholder="Write your message here..."></textarea>
                 </div>
 
                 <!-- Name -->
                 <div class="mb-4">
                     <label class="form-label fw-bold">Your name</label>
-                    <input type="text" class="form-control" placeholder="Enter your name">
+                    <input id="c_name" type="text" class="form-control" placeholder="Enter your name">
                 </div>
 
                 <!-- Email -->
                 <div class="mb-4">
                     <label class="form-label fw-bold">Your email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <input id="c_email" type="email" class="form-control" placeholder="Enter your email">
                 </div>
 
-                <!-- Submit -->
-                <button type="submit" class="btn btn-primary px-5 py-2 fw-bold">
+                <!-- Submit Button -->
+                <button type="button" onclick="submitForm()" class="btn btn-primary px-5 py-2 fw-bold">
                     Send →
                 </button>
+
+                <!-- Error Message -->
+                <div>
+                    <span id="c_error" class="text-danger fw-bold"></span>
+                </div>
 
             </form>
 
@@ -84,11 +96,59 @@
 
 </div>
 
+
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// reset error message
+function reset_contact_error() {
+    document.getElementById("c_error").textContent = "";
+}
+
+function submitForm() {
+
+    // my values
+    const msg = document.getElementById("c_message").value.trim();
+    const name = document.getElementById("c_name").value.trim();
+    const email = document.getElementById("c_email").value.trim();
+
+    const c_error = document.getElementById("c_error");
+
+   
+    reset_contact_error();
+
+    let form_validity = true;
+
+    
+    if (msg == "" || msg.length < 3) {
+        c_error.textContent = "Please fill the form correctly!";
+        form_validity = false;
+    }
+
+    if (name == "" || name.length < 2) {
+        c_error.textContent = "Please fill the form correctly!";
+        form_validity = false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        c_error.textContent = "Please fill the form correctly!";
+        form_validity = false;
+    }
+
+    if (form_validity) {
+        alert("The form submitted! We will reply to you shortly.");
+        return true;
+    } else {
+        return false;
+    }
+}
+</script>
 
 <!-- FOOTER -->
 <script src="scripts/footer.js"></script>
 
 </body>
 </html>
+

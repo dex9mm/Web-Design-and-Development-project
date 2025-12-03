@@ -64,20 +64,6 @@ function checkLoginStatus() {
 
 function authenticate(){
     
-    const currentUserName = targetElementInput.value; 
-	if (currentUserName.length <= 2) {
-		   alert("Please enter a username longer than 2 characters.");
-			return; 
-		}
-  
-	  // 1. Get the latest value directly from the input element
-     // 2. Validate the value (Safety check)
-    // 3. Update the global variable
-   // 4. Save the username to localStorage
-  // 5. Perform UI update on the message element
- // 6. Hide the login screen, but ONLY if the element exists
-// 7. Show the main screen, but ONLY if the element exists
-  
     sUserName = currentUserName;
     localStorage.setItem('username', sUserName); 
 
