@@ -9,9 +9,9 @@
 
     <!-- Bootstrap -->
     <meta charset="utf-8">
-	<meta name="description" content="Information page for website">
-	<meta name="author" content="Alexander Kirichenko">
-	<meta name="keywords" content="sustainability, registration">
+    <meta name="description" content="Information page for website">
+    <meta name="author" content="Alexander Kirichenko">
+    <meta name="keywords" content="sustainability, water, environment">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,84 +20,97 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <script src="scripts/nav.js"></script>
+<!-- NAVBAR -->
+<script src="scripts/nav.js"></script>
 
+<!-- PAGE CONTENT -->
+<div class="container mt-5 pt-4">
 
-    <!-- PAGE CONTENT -->
-    <div class="container mt-5 pt-4">
-
-        <!-- Title -->
-		<div class="title-style">
+    <!-- Title Block -->
+    <div class="title-style">
         <h2 class="text-center mb-3 font-bartle">Info</h2>
-        <p class="text-center mb-5">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-        </div>
-
-        <!-- NEW MY TABLE -->
-        <div class="my-wrapper">
-
-            <!-- LEFT COLUMN -->
-            <div class="info-column">
-
-                <!-- Industry -->
-               <div class="info-box">
-                 <div class="info-image">
-                   <img src="style/images/svg1.svg" alt="First icon">
-                 </div>
-
-                    <h5 class="info-title">Industry</h5>
-                    <p class="info-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </div>
-
-                <!-- Agriculture -->
-                <div class="info-box">
-                    <div class="info-image">
-					 <img src="style/images/svg2.svg" alt="Second icon">
-					</div>
-					
-                    <h5 class="info-title">Agriculture</h5>
-                    <p class="info-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT COLUMN -->
-            <div class="info-column">
-
-                <!-- Households -->
-                <div class="info-box">
-                    <div class="info-image">
-					<img src="style/images/svg3.svg" alt="Third icon">
-					</div>
-					
-                    <h5 class="info-title">Households</h5>
-                    <p class="info-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </div>
-
-                <!-- Power Use -->
-                <div class="info-box">
-                    <div class="info-image">
-					<img src="style/images/svg4.svg" alt="Fourth icon">
-					</div>
-					
-                    <h5 class="info-title">Power Use</h5>
-                    <p class="info-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                </div>
-
-            </div>
-
-        </div>
-        <!-- THIS IS END OF TABLE -->
-
+        <p class="text-center mb-4">
+            Clean water is very important for people's lives. But it is still scarce in many countries.
+            In this section we explain why this is the case and how different areas use water.
+            We also show what can be done to conserve water and improve its quality.
+        </p>
     </div>
 
+    <!-- CARDS GRID -->
+    <div class="row g-4 mt-1">
 
-    <!-- FOOTER -->
-    <script src="scripts/footer.js"></script>
+        <!-- Industry -->
+        <div class="col-md-6 d-flex">
+            <div class="info-box flex-fill">
+                <div class="info-image">
+                    <img src="style/images/svg1.svg" alt="Industry icon">
+                </div>
+                <h5 class="info-title">Industry</h5>
+                <p class="info-text">
+                    Industries use water for cooling, manufacturing goods and cleaning materials.
+                    Because of this, the water often becomes dirty and is released back into the natural environment.
+                    If factories use old equipment, they waste even more water. However, modern technology helps
+                    purify water and reuse it, reducing pollution and saving important resources.
+                </p>
+            </div>
+        </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Households -->
+        <div class="col-md-6 d-flex">
+            <div class="info-box flex-fill">
+                <div class="info-image">
+                    <img src="style/images/svg3.svg" alt="Household icon">
+                </div>
+                <h5 class="info-title">Households</h5>
+                <p class="info-text">
+                    In every home, people use water every day: washing hands, taking showers, cooking, washing clothes.
+                    In many countries, water comes directly from the tap, but in some places it must be brought from rivers
+                    or wells. If people learn to save water and use simple filters, they can improve their health and quality of life.
+                </p>
+            </div>
+        </div>
+
+        <!-- Agriculture -->
+        <div class="col-md-6 d-flex">
+            <div class="info-box flex-fill">
+                <div class="info-image">
+                    <img src="style/images/svg2.svg" alt="Agriculture icon">
+                </div>
+                <h5 class="info-title">Agriculture</h5>
+                <p class="info-text">
+                    Agriculture is one of the biggest areas where water is used. Farms water large fields and give water
+                    to animals every day. Old watering methods waste a lot of water, causing soils to dry out.
+                    New methods like drip irrigation help save water and keep plants and nature healthy.
+                </p>
+            </div>
+        </div>
+
+        <!-- Power Use -->
+        <div class="col-md-6 d-flex">
+            <div class="info-box flex-fill">
+                <div class="info-image">
+                    <img src="style/images/svg4.svg" alt="Power use icon">
+                </div>
+                <h5 class="info-title">Power Use</h5>
+                <p class="info-text">
+                    The energy industry also relies heavily on water. Thermal power plants use it to cool equipment,
+                    and hydroelectric plants run on water alone. Old systems waste too much water and can pollute the
+                    environment. Modern technologies reduce water use and make energy production cleaner.
+                </p>
+            </div>
+        </div>
+
+    </div><!-- END ROW -->
+
+</div><!-- END CONTAINER -->
+
+<!-- FOOTER -->
+<script src="scripts/footer.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
+
