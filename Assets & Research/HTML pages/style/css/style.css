@@ -214,6 +214,7 @@ body {
 
 
 
+
 /* ===ALEXANDER K section start=== */
 
 
@@ -303,9 +304,6 @@ body {
 
 
 /* Derek o K sectio start */
-
-
-
 
 
 
@@ -400,6 +398,9 @@ body {
 /* Derek o K section end */
 
 /* Tristan section start */
+/*------------------*/
+
+/* styling for the map iframe */
 #map{
 	display: block;
 	margin-left: auto;
@@ -410,32 +411,62 @@ body {
 	/* align-content: center; */
 }
 
+/* used to add black background to form */
+.darken{
+	background-color: black;
+}
+
+/* styling for "The well should never go dry" image */
 .well-image{
 	border-radius: 10px; 
 	padding: 10px; 
 	height: 70%;
 }
 
+/* Styling for the image beside the suggestions form */
 .news-image{
-	border-radius: 10px; 
+	/* border-radius: 0px;  */
+	margin: 0;
+	padding: 0; 
+	height: 100%;
+}
+
+/* styling for the image on the side pannel */
+.side-image{
+	object-fit: cover; 
+	border-radius: 12px; 
 	padding: 10px; 
 	height: 100%;
 }
-	
 
+/* stylling for the colour of error message when validating the form */
+.error_msg{
+	color: red;
+}
+
+/* styling for the border of the div containing the suggestion form */
+.tbo_bold{
+	border: 2px solid black;
+}
+
+/* background image for the conservation page */
 body.consv{
 	background-image: url("../images/vividblue.jpg");
 }
 
+/* background image for the find us page */
 body.findus{
 	background-image: url("../images/tbofindusbackground.jpg");
 }
+
+/* styling used to center the map */
 .centered {
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
 } 
 
+/* google fonts styling class */
 .bbh-sans{
   font-family: "BBH Sans Bartle", sans-serif;
   font-weight: 400;
@@ -446,10 +477,11 @@ body.findus{
 	color:white;
 }
 
-#imgtri{
-	width:20%;
-}
+/* #imgtri{ */
+	/* width:20%; */
+/* } */
 
+/* google fonts styling class */
 .roboto-slab{
   font-family: "Roboto Slab", serif;
   font-weight: <weight>;
